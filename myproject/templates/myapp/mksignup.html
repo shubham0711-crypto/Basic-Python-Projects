@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href={%  static  'myapp/main.css' %}>
+    <title>HOME</title>
+</head>
+<body >
+{% include 'myapp/head.html' %}
+{% block header %}
+{% endblock %}
+<div>
+
+    {% for key,value in data.items %}
+        <p> {{ key }} = {{ value }} </p>
+    {% endfor %}
+</div>
+
+{% include 'myapp/foot.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>
